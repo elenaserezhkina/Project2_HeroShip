@@ -1,0 +1,12 @@
+@import "../../Utils/Color.scss";
+
+.header-container {
+  height: 75px;
+
+  background-color: $mainPink;
+  .header-logo {
+    height: 55px;
+    margin: 7px;
+    padding: 5px;
+  }
+}
