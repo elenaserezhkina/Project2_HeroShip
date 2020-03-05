@@ -4,10 +4,10 @@ import "./LetsGoButton.scss";
 // Material UI
 import Button from "@material-ui/core/Button";
 
-export default function SurpriseMeButton() {
+export default function SurpriseMeButton({ onClick }) {
   return (
     <div className="letsGoButtonContainer">
-      <Button variant="contained" color="secondary">
+      <Button onClick={onClick} variant="contained" color="secondary">
         Let's go!
       </Button>
     </div>

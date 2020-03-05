@@ -4,6 +4,7 @@ import CharacterSlider from "./Sliders/CharacterSlider";
 import GenderCheck from "./Sliders/GenderCheck";
 import LetsGoButton from "../SurpriseMe/LetsGoButton";
 import "./SelectPreferences.scss";
+import { useHistory } from "react-router-dom";
 
 function SelectPreferences() {
   const [power, setPower] = useState([0, 100]);
@@ -12,6 +13,19 @@ function SelectPreferences() {
     male: true,
     female: true
   });
+
+  //to redirect to another page
+  const history = useHistory();
+
+  function submitPreferences() {
+    //redirect to choosehero with selected values
+
+    //Object.keys return all keys from object and we filter them
+    const selectedGender = Object.keys(gender).filter(key => gender[key]);
+    history.push(
+      `/choosehero?power=${power}&character=${character}&gender=${selectedGender}`
+    );
+  }
 
   return (
     <div className="preferencesContainer">
@@ -50,7 +64,7 @@ function SelectPreferences() {
           />
         </div>
       </div>
-      <LetsGoButton />
+      <LetsGoButton onClick={submitPreferences} />
     </div>
   );
 }
