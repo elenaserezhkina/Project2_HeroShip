@@ -9,6 +9,7 @@ import QuestionPage from "./Pages/QuestionPage";
 import Notfound from "./Pages/Notfound";
 // import Header from "./Components/Header/HeaderNavigation";
 import HeroInfo from "./Components/HeroInfo/HeroInfo";
+import FinalMatch from "./Components/FinalMatch/FinalMatch";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route exact path="/introduction" component={Introduction} />
         <Route exact path="/preferences" component={QuestionPage} />
         <Route exact path="/choosehero" component={HeroInfo} />
+        <Route exact path="/final" component={FinalMatch} />
+
         <Route path="*" component={Notfound} />
       </Switch>
     </Router>

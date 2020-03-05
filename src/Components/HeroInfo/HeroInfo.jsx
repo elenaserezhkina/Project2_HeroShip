@@ -10,7 +10,7 @@ function HeroInfo() {
   return (
     <React.Fragment>
       <div className="scene scene-card">
-        <div className={`info-wrapper`}>
+        <div className="info-wrapper">
           <Header />
           {/* SIDE ONE  */}
           <div
