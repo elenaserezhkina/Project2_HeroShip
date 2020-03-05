@@ -23,7 +23,7 @@ function GenderCheck() {
             value="checkedA"
           />
         }
-        label="Female"
+        label="F"
       />
       <FormControlLabel
         control={
@@ -34,7 +34,7 @@ function GenderCheck() {
             color="primary"
           />
         }
-        label="Male"
+        label="M"
       />
     </FormGroup>
   );

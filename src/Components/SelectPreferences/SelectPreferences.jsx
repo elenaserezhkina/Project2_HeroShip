@@ -7,14 +7,24 @@ import "./SelectPreferences.scss";
 function SelectPreferences() {
   return (
     <div className="preferencesContainer">
-      <div>
-        <CharacterSlider />
+      <div className="preferencesRow">
+        <div className="preferencesTitle">character</div>
+        <div className="preferencesInput">
+          <CharacterSlider />
+        </div>
       </div>
-      <div>
-        <AgeSlider />
+      <div className="preferencesRow">
+        <div className="preferencesTitle">age</div>
+        <div className="preferencesInput">
+          <AgeSlider />
+        </div>
       </div>
-      <div>
-        <GenderCheck />
+      <div className="preferencesRow">
+        <div className="preferencesTitle">gender</div>
+
+        <div className="preferencesInput">
+          <GenderCheck />
+        </div>
       </div>
     </div>
   );

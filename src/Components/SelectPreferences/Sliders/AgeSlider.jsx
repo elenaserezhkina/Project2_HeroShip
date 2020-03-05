@@ -1,17 +1,7 @@
 import React from "react";
 // Material UI
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
-import Typography from "@material-ui/core/Typography";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: 300 + theme.spacing(3) * 2
-  },
-  margin: {
-    height: theme.spacing(3)
-  }
-}));
 
 const AirbnbSlider = withStyles({
   root: {
@@ -64,23 +54,12 @@ function AirbnbThumbComponent(props) {
 }
 
 function AgeSlider() {
-  const classes = useStyles();
   return (
-    <div>
-      <div>
-        <div className={classes.root}>
-          <div className={classes.margin} />
-          <Typography gutterBottom>age</Typography>
-          <AirbnbSlider
-            ThumbComponent={AirbnbThumbComponent}
-            getAriaLabel={index =>
-              index === 0 ? "Minimum price" : "Maximum price"
-            }
-            defaultValue={[20, 40]}
-          />
-        </div>
-      </div>
-    </div>
+    <AirbnbSlider
+      ThumbComponent={AirbnbThumbComponent}
+      getAriaLabel={index => (index === 0 ? "Minimum price" : "Maximum price")}
+      defaultValue={[20, 40]}
+    />
   );
 }
 
