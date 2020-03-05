@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+<<<<<<< HEAD
+=======
+    "material-ui-icons": "^1.0.0-beta.36",
+>>>>>>> acf51d4526cc3568b332173b41b2643f2b418201
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-animations": "^1.0.0",
