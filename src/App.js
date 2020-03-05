@@ -5,7 +5,6 @@ import TellUsYourName from "./Components/TellUsYourName/TellUsYourName";
 function App() {
   return (
     <div>
-      let's go!
       <TellUsYourName />
     </div>
   );
