@@ -66,3 +66,32 @@
 .button-yes:hover {
   transform: scale(1.1);
 }
+
+////////////////////////////@extend
+
+.scene {
+  perspective: 600px;
+}
+
+.card {
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  backface-visibility: hidden;
+}
+
+.card__face-back {
+  transform: rotateY(180deg);
+}
+
+.characteristic {
+  background-color: pink;
+}
