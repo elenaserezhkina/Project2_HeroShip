@@ -23,3 +23,39 @@
   height: 350px;
   width: auto;
 }
+.chat {
+  height: 40px;
+  margin-top: 290px;
+  margin-left: 60px;
+  animation-name: lightSpeedIn;
+  animation-duration: 1s;
+}
+.profile {
+  height: 80px;
+  margin-top: 90px;
+  animation-name: lightSpeedIn;
+  animation-duration: 0.5s;
+}
+@keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
