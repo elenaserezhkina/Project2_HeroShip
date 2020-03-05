@@ -10,10 +10,10 @@ function FinalMatch() {
       <div className="wrapper">
         <Header />
 
-        <h1 className="winner">
+        <p className="winner">
           it's <br />
-          SUPERMAN
-        </h1>
+          <h1>SUPERMAN</h1>
+        </p>
 
         <div className="background-white">
           <div className="picture">
