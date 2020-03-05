@@ -1,7 +1,7 @@
 import React from "react";
 // Material UI
 import { withStyles } from "@material-ui/core/styles";
-import Slider from "@material-ui/core/Slider";
+import MaterialSlider from "@material-ui/core/Slider";
 
 const AirbnbSlider = withStyles({
   root: {
@@ -41,26 +41,21 @@ const AirbnbSlider = withStyles({
     opacity: 1,
     height: 3
   }
-})(Slider);
+})(MaterialSlider);
 
 function AirbnbThumbComponent(props) {
-  return (
-    <span {...props}>
-      <span className="bar" />
-      <span className="bar" />
-      <span className="bar" />
-    </span>
-  );
+  return <span {...props}></span>;
 }
 
-function AgeSlider() {
+function Slider({ value, handleChange }) {
   return (
     <AirbnbSlider
+      value={value}
+      onChange={handleChange}
       ThumbComponent={AirbnbThumbComponent}
-      getAriaLabel={index => (index === 0 ? "Minimum price" : "Maximum price")}
-      defaultValue={[20, 40]}
+      valueLabelDisplay="auto"
     />
   );
 }
 
-export default AgeSlider;
+export default Slider;

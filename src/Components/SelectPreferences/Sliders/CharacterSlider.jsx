@@ -5,13 +5,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import "./CharacterSlider.scss";
 
-function CharacterSlider() {
-  const [value, setValue] = React.useState("female");
-
-  const handleChange = event => {
-    setValue(event.target.value);
-  };
-
+function CharacterSlider({ value, handleChange }) {
   return (
     <FormControl component="fieldset">
       <RadioGroup
