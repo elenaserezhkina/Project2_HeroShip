@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import TellUsYourName from "./Components/TellUsYourName/TellUsYourName";
+import MainPage from "./Pages/MainPage";
+import Introduction from "./Pages/Introduction";
 
 function App() {
   return (
     <div>
-      <TellUsYourName />
+      {/* <MainPage /> */}
+      <Introduction />
     </div>
   );
 }
