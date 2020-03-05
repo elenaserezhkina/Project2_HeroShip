@@ -2,6 +2,7 @@ import React from "react";
 import AgeSlider from "./Sliders/AgeSlider";
 import CharacterSlider from "./Sliders/CharacterSlider";
 import GenderCheck from "./Sliders/GenderCheck";
+import LetsGoButton from "../SurpriseMe/LetsGoButton";
 import "./SelectPreferences.scss";
 
 function SelectPreferences() {
@@ -26,6 +27,7 @@ function SelectPreferences() {
           <GenderCheck />
         </div>
       </div>
+      <LetsGoButton />
     </div>
   );
 }

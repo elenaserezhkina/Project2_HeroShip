@@ -1,14 +1,14 @@
 import React from "react";
-import "./SurpriseMeButton.scss";
+import "./LetsGoButton.scss";
 
 // Material UI
 import Button from "@material-ui/core/Button";
 
 export default function SurpriseMeButton() {
   return (
-    <div className="surpriseMeButtonContainer">
+    <div className="letsGoButtonContainer">
       <Button variant="contained" color="secondary">
-        Surprise me
+        Let's go!
       </Button>
     </div>
   );
