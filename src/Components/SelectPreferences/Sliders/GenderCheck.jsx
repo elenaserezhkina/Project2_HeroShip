@@ -3,38 +3,29 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
-function GenderCheck() {
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true
-  });
-
-  const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.checked });
-  };
-
+function GenderCheck({ value, handleChange }) {
   return (
     <FormGroup row>
       <FormControlLabel
         control={
           <Checkbox
-            checked={state.checkedA}
-            onChange={handleChange("checkedA")}
-            value="checkedA"
+            checked={value.female}
+            onChange={handleChange}
+            value="female"
           />
         }
-        label="Female"
+        label="F"
       />
       <FormControlLabel
         control={
           <Checkbox
-            checked={state.checkedB}
-            onChange={handleChange("checkedB")}
-            value="checkedB"
+            checked={value.male}
+            onChange={handleChange}
+            value="male"
             color="primary"
           />
         }
-        label="Male"
+        label="M"
       />
     </FormGroup>
   );
