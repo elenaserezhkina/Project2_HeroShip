@@ -2,6 +2,7 @@ import React from "react";
 import "./FinalMatch.scss";
 import Header from "../Header/HeaderNavigation";
 import Chat from "../../Pictures/chat.svg";
+import Profile from "../../Pictures/prof.svg";
 
 function FinalMatch() {
   return (
@@ -16,7 +17,10 @@ function FinalMatch() {
 
         <div className="background-white">
           <div className="picture">
-            <img src={Chat} alt="chat"></img>
+            <div>
+              <img className="chat" src={Chat} alt="chat"></img>
+              <img className="profile" src={Profile} alt="chat"></img>
+            </div>
           </div>
         </div>
       </div>
