@@ -1,0 +1,68 @@
+@import "../../Utils/Color.scss";
+
+.info-wrapper {
+  background-color: $mainPink;
+  height: 600px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+.picture-background {
+  height: 450px;
+  margin: 20px;
+  // width: 72%;
+  // padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 0;
+}
+.picture {
+  background-image: url("https://d.ibtimes.co.uk/en/full/1540185/henry-cavill.jpg?w=736&f=f5985c8f09cb80d169660b65cdc2b43a");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: auto;
+  margin: 20px;
+}
+.hero-picture-wrapper {
+  padding-top: 1px;
+}
+.like-buttons {
+  background-color: $mainPink;
+  width: auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.name-age-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.hero-name {
+  font-size: 16px;
+}
+.button-readmore:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.button-readmore {
+  background: linear-gradient(to bottom, #f25764 5%, #f25764 100%);
+  background-color: #f25764;
+  border-radius: 28px;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.button-readmore:hover {
+  transform: scale(1.1);
+}
+.button-no:hover {
+  transform: scale(1.1);
+}
+.button-yes:hover {
+  transform: scale(1.1);
+}
