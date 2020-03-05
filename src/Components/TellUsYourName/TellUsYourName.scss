@@ -1,0 +1,29 @@
+@import "../../Utils/Color.scss";
+
+.tell-us-your-name-container {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 30px;
+    color: $mainPink;
+    text-align: center;
+  }
+  input {
+    width: 18em;
+    height: 2.5em;
+    margin: 2em auto;
+    background-color: lightgrey;
+    border: 2px solid $mainPink;
+  }
+  button {
+    width: 8em;
+    height: 2.5em;
+    margin: 2em auto;
+    border-radius: 30px;
+    background-color: $mainPink;
+    color: $mainWhite;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}

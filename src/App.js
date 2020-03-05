@@ -1,8 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import TellUsYourName from "./Components/TellUsYourName/TellUsYourName";
 
 function App() {
-  return <div>let's go!</div>;
+  return (
+    <div>
+      let's go!
+      <TellUsYourName />
+    </div>
+  );
 }
 
 export default App;
