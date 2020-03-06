@@ -54,7 +54,7 @@ function ChooseHero() {
   }, [heroes]);
   const handleAccept = () => {
     const chosenHero = suggestedHeroes[suggestionNumber];
-    history.push(`/final?id=${chosenHero.id}`);
+    history.push(`/final/${chosenHero.id}`);
   };
   // TODO handle when no suggestions, handle when ran out of suggestions
   //   heroes.length && suggestedHeroes.length = 0
@@ -80,4 +80,3 @@ function ChooseHero() {
 }
 
 export default ChooseHero;
-
