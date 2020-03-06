@@ -1,0 +1,72 @@
+@import "../Utils/Color.scss";
+
+.introduction-container {
+  background-color: $mainPink;
+  height: 100%;
+}
+
+.introduction-logo {
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+}
+
+.logo {
+  animation: bounceIn;
+  animation-duration: 2s;
+  width: 300px;
+}
+
+.introduction-text-love {
+  color: $mainWhite;
+  font-size: 60px;
+  transform: rotate(5deg);
+  text-shadow: 0px 2px 4px #0f0f0f;
+  margin-left: 60%;
+  margin-bottom: 0;
+}
+
+.introduction-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: $mainWhite;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 30vh;
+}
+
+.introduction-text-hero {
+  transform: rotate(-40deg);
+  animation: bounceIn;
+  animation-duration: 2s;
+}
+
+.introduction-text-zero,
+.introduction-text-to,
+.introduction-text-hero {
+  margin-left: 3vw;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,5 +1,8 @@
+import AgeSlider from "./Sliders/AgeSlider";
+
 import React, { useState } from "react";
 import Slider from "./Sliders/Slider";
+
 import CharacterSlider from "./Sliders/CharacterSlider";
 import GenderCheck from "./Sliders/GenderCheck";
 import LetsGoButton from "../SurpriseMe/LetsGoButton";
