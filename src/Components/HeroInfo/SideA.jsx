@@ -6,6 +6,12 @@ function SideA({ changeCard, hero }) {
   let styles = {
     backgroundImage: `url(${pic})`
   };
+
+  // let winnerName = localStorage.setItem("winnerName");
+
+  // const gotoFinalPage = event => {
+  //   localStorage.setItem("winnerName");
+  // };
   return (
     <React.Fragment>
       <div className="info-wrapper">

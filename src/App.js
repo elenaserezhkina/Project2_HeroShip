@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/preferences" component={QuestionPage} />
         <Route exact path="/choosehero" component={ChooseHero} />
         <Route exact path="/heart" component={HeartAnimation} />
-        <Route exact path="/final" component={FinalMatch} />
+        <Route exact path="/final/:id" component={FinalMatch} />
         <Route path="*" component={Notfound} />
       </Switch>
     </Router>
