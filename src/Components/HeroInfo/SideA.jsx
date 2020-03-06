@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideA.scss";
 
-function SideA({ changeCard }) {
+function SideA({ changeCard, hero }) {
   return (
     <React.Fragment>
       <div className="info-wrapper">
@@ -9,7 +9,7 @@ function SideA({ changeCard }) {
           <div className="picture-background">
             <div className="picture"></div>
             <div className="name-age-button">
-              <p className="hero-name">name, age</p>
+              <p className="hero-name">{hero.name}</p>
               <button onClick={changeCard} className="button-readmore">
                 Read more
               </button>
