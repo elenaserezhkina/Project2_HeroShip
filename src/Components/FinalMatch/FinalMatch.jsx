@@ -7,6 +7,7 @@ import Profile from "../../Pictures/prof.svg";
 function FinalMatch(props) {
   const [hero, setHero] = useState("");
   const [loading, setLoading] = useState(true);
+  const [image, setImage] = useState("");
   useEffect(() => {
     fetch(
       `https://www.superheroapi.com/api.php/10222024101214062/${props.match.params.id}`
@@ -14,15 +15,10 @@ function FinalMatch(props) {
       .then(resp => resp.json())
       .then(hero => {
         setHero(hero);
+        setImage(hero.image.url);
       })
-      .then(hero)
       .then(setLoading(false));
   }, []);
-
-  let winnerPicture = hero.image.url;
-  let stylesHero = {
-    backgroundImage: `url(${winnerPicture})`
-  };
 
   return loading ? (
     <h1>Loading...</h1>
@@ -36,7 +32,7 @@ function FinalMatch(props) {
           <h1>{hero.name}</h1>
         </p>
         <div className="background-white">
-          <div style={stylesHero} className="picture">
+          <div style={{ backgroundImage: `url(${image})` }} className="picture">
             <div>
               <img className="chat" src={Chat} alt="chat"></img>
               <img className="profile" src={Profile} alt="chat"></img>
