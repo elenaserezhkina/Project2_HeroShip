@@ -26,22 +26,21 @@ function ChooseHero() {
   }, []);
   useEffect(() => {
     const power = query.get("power").split(",");
-
-    const gender = query.get("gender").split(",");
+    console.log(query.get("gender"));
+    const gender = query.get("gender") ? query.get("gender").split(",") : [];
     const character = query.get("character");
 
-    let filteredHeroes = heroes.filter(
-      hero =>
+    let filteredHeroes = heroes.filter(hero => {
+      return (
         +hero.powerstats.power >= +power[0] &&
         +hero.powerstats.power <= +power[1] &&
         hero.biography.alignment === character &&
-        ((hero.appearance.gender.toLowerCase() === gender[0] &&
-          hero.appearance.gender.toLowerCase() === gender[1]) ||
-          hero.appearance.gender.toLowerCase() === gender[0] ||
-          hero.appearance.gender.toLowerCase() === gender[1])
-    );
+        gender.length &&
+        gender.includes(hero.appearance.gender.toLowerCase())
+      );
+    });
     // TODO get random heroes
-    setSuggestedHeroes(filteredHeroes.slice(0, 10));
+    setSuggestedHeroes(filteredHeroes.slice(0, 20));
   }, [heroes]);
   const handleAccept = () => {
     const chosenHero = suggestedHeroes[suggestionNumber];
@@ -49,6 +48,7 @@ function ChooseHero() {
   };
   // TODO handle when no suggestions, handle when ran out of suggestions
   //   heroes.length && suggestedHeroes.length = 0
+  console.log(suggestedHeroes.length);
   return (
     <div>
       <Header />
