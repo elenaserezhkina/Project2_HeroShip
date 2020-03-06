@@ -11,13 +11,14 @@ function SideB({ changeCard, hero }) {
             <div className="hero-picture-wrapper">
               <div className="card-with-details">
                 <ul className="characteristic">
-                  <li>meet {hero.name}, :</li>
-                  <li>also known as Alter-egos: </li>
+                  <li>Meet {hero.name} !</li>
+
                   <li>Mostly works as {hero.work.occupation}. </li>
                   <li>Deffenetly on the {hero.biography.alignment} side. </li>
                   <li> Intelligence : {hero.powerstats.intelligence} </li>
                   <li> Power : {hero.powerstats.power} </li>
-                  {/* <li>Eye color : {hero.appearance.["eye-contact"]}</li> */}
+                  <li>Eye color : {hero.appearance["eye-color"]}</li>
+                  <li>Hair color : {hero.appearance["hair-color"]}</li>
                 </ul>
                 <button onClick={changeCard} className="button-goback">
                   {" "}
