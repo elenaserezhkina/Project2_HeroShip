@@ -17,7 +17,6 @@ function ChooseHero() {
   useEffect(() => {
     async function fetchData() {
       const result = await axios(
-        //taking heroes whose name has letter a
         "https://www.superheroapi.com/api.php/10222024101214062/search/a"
       );
       setHeroes(result.data.results);
@@ -40,15 +39,15 @@ function ChooseHero() {
           hero.appearance.gender.toLowerCase() === gender[0] ||
           hero.appearance.gender.toLowerCase() === gender[1])
     );
-    // TODO get random heroes
+
     setSuggestedHeroes(filteredHeroes.slice(0, 10));
   }, [heroes]);
+
   const handleAccept = () => {
     const chosenHero = suggestedHeroes[suggestionNumber];
-    history.push(`/final?id=${chosenHero.id}`);
+    history.push(`/final/${chosenHero.id}`);
   };
-  // TODO handle when no suggestions, handle when ran out of suggestions
-  //   heroes.length && suggestedHeroes.length = 0
+
   return (
     <div>
       <Header />
