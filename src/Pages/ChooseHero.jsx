@@ -39,8 +39,10 @@ function ChooseHero() {
         gender.includes(hero.appearance.gender.toLowerCase())
       );
     });
+
     // TODO get random heroes
-    setSuggestedHeroes(filteredHeroes.slice(0, 20));
+
+    setSuggestedHeroes(filteredHeroes.slice(0, 25));
   }, [heroes]);
   const handleAccept = () => {
     const chosenHero = suggestedHeroes[suggestionNumber];
