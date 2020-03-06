@@ -1,4 +1,22 @@
 .preferencesContainer {
-  //   display: flex;
-  //   justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  .preferencesRow {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    background-color: rgba($color: #fffafa, $alpha: 0.2);
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .preferencesTitle {
+    flex-basis: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .preferencesInput {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
 }

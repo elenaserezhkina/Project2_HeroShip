@@ -1,15 +1,15 @@
 .questionPageBackground {
   background-color: #f25764;
   color: white;
+  min-height: 100vh;
   h2 {
     text-align: center;
+    padding: 10px;
   }
 }
 .centerQuestions {
   margin: 0 auto;
   width: 80%;
-  display: flex;
-  justify-content: center;
 }
 .alignCenter {
   text-align: center;
