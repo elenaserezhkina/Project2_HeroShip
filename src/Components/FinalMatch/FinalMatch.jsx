@@ -3,9 +3,19 @@ import "./FinalMatch.scss";
 import Header from "../Header/HeaderNavigation";
 import Chat from "../../Pictures/chat.svg";
 import Profile from "../../Pictures/prof.svg";
+import HeartAnimation from "../HeartAnimation/HeartAnimation";
 
 function FinalMatch() {
-  return (
+  const [animation, setAnimation] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setAnimation(false);
+    }, 2000);
+  });
+  return animation ? (
+    <HeartAnimation />
+  ) : (
     <React.Fragment>
       <div className="wrapper">
         <Header />

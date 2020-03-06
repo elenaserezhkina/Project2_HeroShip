@@ -30,7 +30,7 @@ function Introduction() {
   useEffect(() => {
     setTimeout(() => {
       setRedirect(true);
-    }, 3000);
+    }, 4000);
   });
   return redirect ? (
     <Redirect to="/home" />

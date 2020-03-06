@@ -3,6 +3,8 @@ import axios from "axios";
 import { useLocation, useHistory } from "react-router-dom";
 import HeroInfo from "../Components/HeroInfo/HeroInfo";
 import Header from "../Components/Header/HeaderNavigation";
+import HeartLoadingAnimation from "../Components/HeartAnimation/HeartLoadingAnimation";
+import "./ChooseHero.scss";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -12,15 +14,23 @@ function ChooseHero() {
   const [heroes, setHeroes] = useState([]);
   const [suggestedHeroes, setSuggestedHeroes] = useState([]);
   const [suggestionNumber, setSuggestionNumber] = useState(0);
+  const [loading, setLoading] = useState(true);
+
   const query = useQuery();
   const history = useHistory();
   useEffect(() => {
-    async function fetchData() {
-      const result = await axios(
+    console.log("useEffect");
+    function fetchData() {
+      fetch(
         //taking heroes whose name has letter a
         "https://www.superheroapi.com/api.php/10222024101214062/search/a"
-      );
-      setHeroes(result.data.results);
+      )
+        .then(data => data.json())
+        .then(result => {
+          console.log("result", result);
+          setHeroes(result.results);
+        })
+        .then(setTimeout(() => setLoading(false), 2500));
     }
     fetchData();
   }, []);
@@ -52,14 +62,18 @@ function ChooseHero() {
   return (
     <div>
       <Header />
-      {heroes.length && suggestedHeroes.length ? (
+      {loading ? (
+        <div className="choose-hero-loading">
+          <h1>Loading...</h1>
+          <HeartLoadingAnimation />
+        </div>
+      ) : (
         <HeroInfo
           hero={suggestedHeroes[suggestionNumber]}
           onReject={() => setSuggestionNumber(suggestionNumber + 1)}
           onAccept={handleAccept}
         />
-      ) : (
-        "Loading"
+        // "Loading"
       )}
     </div>
   );
