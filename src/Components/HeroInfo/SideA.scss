@@ -17,9 +17,9 @@
 .picture {
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
+  height: 320px;
   width: auto;
-  margin: 20px;
+  margin: 10px;
 }
 .hero-picture-wrapper {
   padding-top: 1px;
@@ -36,9 +36,10 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 0px;
 }
 .hero-name {
-  font-size: 16px;
+  font-size: 25px;
 }
 .button-readmore:hover {
   border-color: rgba(255, 255, 255, 1);

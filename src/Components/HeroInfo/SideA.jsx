@@ -19,7 +19,7 @@ function SideA({ changeCard, hero }) {
           <div className="picture-background">
             <div style={styles} className="picture"></div>
             <div className="name-age-button">
-              <p className="hero-name">{hero.name}</p>
+              <h1 className="hero-name">{hero.name}</h1>
               <button onClick={changeCard} className="button-readmore">
                 Read more
               </button>
