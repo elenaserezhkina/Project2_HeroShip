@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { bounceInDown, bounceInLeft } from "react-animations";
 import styled, { keyframes } from "styled-components";
 import Logo from "../Pictures/logo.svg";
 import "./Introduction.scss";
+import { Redirect } from "react-router-dom";
 
 const bounceInDownAnimation = keyframes`${bounceInDown}`;
 const bounceInLeftAnimation = keyframes`${bounceInLeft}`;
@@ -24,7 +25,16 @@ const HeroDiv = styled.div`
 `;
 
 function Introduction() {
-  return (
+  const [redirect, setRedirect] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setRedirect(true);
+    }, 3000);
+  });
+  return redirect ? (
+    <Redirect to="/home" />
+  ) : (
     <div className="introduction-container">
       <div className="introduction-logo">
         <img className="logo" src={Logo} alt="logo" />

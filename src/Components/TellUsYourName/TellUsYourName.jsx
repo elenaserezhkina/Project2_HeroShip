@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./TellUsYourName.scss";
 import { useHistory } from "react-router-dom";
 
 function TellUsYourName() {
-  const [name, setName] = useState(localStorage.setItem("nameInLocalStorage"));
-
   let tellUsYourNameHistory = useHistory();
 
   function tellUsYourNameHandClick() {
@@ -12,7 +10,7 @@ function TellUsYourName() {
   }
 
   const tellUsYourNameHandChange = event => {
-    setName(event.target.value);
+    localStorage.setItem("name", event.target.value);
   };
 
   return (

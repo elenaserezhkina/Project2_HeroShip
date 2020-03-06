@@ -13,7 +13,6 @@ export default class HeartAnimation extends React.Component {
         preserveAspectRatio: "xMidYMid slice"
       }
     };
-
     return (
       <div
         style={{

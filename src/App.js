@@ -9,6 +9,7 @@ import Notfound from "./Pages/Notfound";
 // import Header from "./Components/Header/HeaderNavigation";
 import FinalMatch from "./Components/FinalMatch/FinalMatch";
 import ChooseHero from "./Pages/ChooseHero";
+import HeartAnimation from "./Pages/HeartAnimationPage";
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
       {/* <Header /> */}
       <Switch>
         {/* <HeroInfo /> */}
-        <Route exact path="/" component={MainPage} />
+        <Route exact path="/" component={Introduction} />
         <Route exact path="/home" component={MainPage} />
         <Route exact path="/introduction" component={Introduction} />
         <Route exact path="/preferences" component={QuestionPage} />
         <Route exact path="/choosehero" component={ChooseHero} />
+        <Route exact path="/heart" component={HeartAnimation} />
         <Route exact path="/final" component={FinalMatch} />
-
         <Route path="*" component={Notfound} />
       </Switch>
     </Router>
