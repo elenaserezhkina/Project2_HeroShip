@@ -1,7 +1,7 @@
 @import "../../Utils/Color.scss";
 
 .tell-us-your-name-container {
-  margin-top: 3em;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
 
@@ -13,18 +13,19 @@
   input {
     width: 18em;
     height: 2.5em;
-    margin: 2em auto;
+    margin: 1em auto;
     background-color: #eeeeee;
     border: 2px solid $mainPink;
   }
   button {
     width: 8em;
     height: 2.5em;
-    margin: 2em auto;
+    margin: 1em auto;
     border-radius: 30px;
     background-color: $mainPink;
     color: $mainWhite;
     font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
   }
 }
