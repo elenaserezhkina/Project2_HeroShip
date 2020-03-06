@@ -2,6 +2,8 @@ import React from "react";
 import "./SideA.scss";
 
 function SideA({ changeCard, hero }) {
+  console.log(hero);
+  let pic = hero.appearance.url;
   return (
     <React.Fragment>
       <div className="info-wrapper">

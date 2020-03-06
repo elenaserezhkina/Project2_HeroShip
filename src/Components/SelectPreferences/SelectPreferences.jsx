@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // import AgeSlider from "./Sliders/AgeSlider";
 
+=======
+>>>>>>> d696d3e31c205b0d41c4d68468964ec0154c3368
 import React, { useState } from "react";
 import Slider from "./Sliders/Slider";
 
