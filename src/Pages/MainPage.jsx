@@ -10,7 +10,6 @@ function MainPage() {
         className="main-page-img"
         style={{ backgroundImage: `url(${MainPagePhoto})` }}
       />
-
       <TellUsYourName />
     </div>
   );
