@@ -10,10 +10,10 @@ function SideB({ changeCard }) {
             <div className="hero-picture-wrapper">
               <div className="card-with-details">
                 <ul className="characteristic">
-                  <li>Name :</li>
-                  <li>Alter-egos: </li>
-                  <li>Occupation : </li>
-                  <li>Alignment : </li>
+                  <li>meet Name, :</li>
+                  <li>also known as Alter-egos: </li>
+                  <li>Mostly works at Occupation : </li>
+                  <li>Deffenetly on the Alignment side. </li>
                   <li> Intelligence : </li>
                   <li> Power : </li>
                   <li>Eye color : </li>
