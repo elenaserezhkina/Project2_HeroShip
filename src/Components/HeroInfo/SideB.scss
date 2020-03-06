@@ -1,14 +1,12 @@
 @import "../../Utils/Color.scss";
 
-.info-wrapper {
+.wrapper-B {
   background-color: $mainPink;
-  height: 600px;
+  height: 460px;
 }
-.picture-background {
-  height: 450px;
+.pic-bg-sdB {
+  height: 440px;
   margin: 20px;
-  // width: 72%;
-  // padding: 30px;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 0;
@@ -21,30 +19,15 @@
   width: auto;
   margin: 20px;
 }
-.hero-picture-wrapper {
+.pic-wrap-sidB {
   padding-top: 1px;
 }
-.like-buttons {
-  background-color: $mainPink;
-  width: auto;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.name-age-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.hero-name {
-  font-size: 16px;
-}
-.button-readmore:hover {
+
+.button-goback:hover {
   border-color: rgba(255, 255, 255, 1);
 }
 
-.button-readmore {
+.button-goback {
   background: linear-gradient(to bottom, #f25764 5%, #f25764 100%);
   background-color: #f25764;
   border-radius: 28px;
@@ -53,13 +36,13 @@
   font-size: 13px;
   padding: 10px 20px;
   text-decoration: none;
+  margin-left: 200px;
 }
-.button-readmore:hover {
+.button-goback:hover {
   transform: scale(1.1);
 }
-.button-no:hover {
-  transform: scale(1.1);
-}
-.button-yes:hover {
-  transform: scale(1.1);
+.characteristic {
+  list-style-type: none;
+  line-height: 40px;
+  margin: 30px 5px 40px;
 }
