@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 
 function SelectPreferences() {
   const [power, setPower] = useState([0, 100]);
-  const [character, setCharacter] = useState();
+  const [character, setCharacter] = useState("good");
   const [gender, setGender] = useState({
     male: true,
     female: true
@@ -24,7 +24,8 @@ function SelectPreferences() {
     //Object.keys return all keys from object and we filter them
     const selectedGender = Object.keys(gender).filter(key => gender[key]);
     history.push(
-      `/choosehero?power=${power}&character=${character}&gender=${selectedGender}`
+      `/choosehero?power=${power}&character=${character ||
+        ""}&gender=${selectedGender}`
     );
   }
 
