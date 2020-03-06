@@ -27,14 +27,18 @@ function ChooseHero() {
   useEffect(() => {
     const power = query.get("power").split(",");
 
-    const gender = query.get("gender");
+    const gender = query.get("gender").split(",");
     const character = query.get("character");
 
     let filteredHeroes = heroes.filter(
       hero =>
         +hero.powerstats.power >= +power[0] &&
-        +hero.powerstats.power <= +power[1]
-      // TODO add other filters
+        +hero.powerstats.power <= +power[1] &&
+        hero.biography.alignment === character &&
+        ((hero.appearance.gender.toLowerCase() === gender[0] &&
+          hero.appearance.gender.toLowerCase() === gender[1]) ||
+          hero.appearance.gender.toLowerCase() === gender[0] ||
+          hero.appearance.gender.toLowerCase() === gender[1])
     );
     // TODO get random heroes
     setSuggestedHeroes(filteredHeroes.slice(0, 10));
