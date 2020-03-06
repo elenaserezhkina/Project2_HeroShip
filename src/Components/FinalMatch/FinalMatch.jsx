@@ -3,11 +3,14 @@ import "./FinalMatch.scss";
 import Header from "../Header/HeaderNavigation";
 import Chat from "../../Pictures/chat.svg";
 import Profile from "../../Pictures/prof.svg";
+import HeartAnimation from "../HeartAnimation/HeartAnimation";
+
 
 function FinalMatch(props) {
-  const [hero, setHero] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [image, setImage] = useState("");
+  const [animation, setAnimation] = React.useState(true);
+ const [hero, setHero] = useState("");
+ const [image, setImage] = useState("");
+
   useEffect(() => {
     fetch(
       `https://www.superheroapi.com/api.php/10222024101214062/${props.match.params.id}`
@@ -17,11 +20,11 @@ function FinalMatch(props) {
         setHero(hero);
         setImage(hero.image.url);
       })
-      .then(setLoading(false));
+      .then(setTimeout(()=>setAnimation(false),2000));
   }, []);
 
-  return loading ? (
-    <h1>Loading...</h1>
+ return animation ? (
+    <HeartAnimation />
   ) : (
     <React.Fragment>
       <div className="wrapper">
