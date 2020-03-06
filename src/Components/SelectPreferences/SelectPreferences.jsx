@@ -1,4 +1,4 @@
-import AgeSlider from "./Sliders/AgeSlider";
+// import AgeSlider from "./Sliders/AgeSlider";
 
 import React, { useState } from "react";
 import Slider from "./Sliders/Slider";
