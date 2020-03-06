@@ -22,13 +22,8 @@ function App() {
         <Route exact path="/introduction" component={Introduction} />
         <Route exact path="/preferences" component={QuestionPage} />
         <Route exact path="/choosehero" component={ChooseHero} />
-<<<<<<< HEAD
-        <Route exact path="/final/:id" component={FinalMatch} />
-
-=======
         <Route exact path="/heart" component={HeartAnimation} />
         <Route exact path="/final" component={FinalMatch} />
->>>>>>> ace878d7f495ea16b24b56a938a4f98cadd92699
         <Route path="*" component={Notfound} />
       </Switch>
     </Router>
