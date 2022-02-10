@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "material-ui-icons": "^1.0.0-beta.36",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-animations": "^1.0.0",
     "react-card-flip": "^1.0.10",
